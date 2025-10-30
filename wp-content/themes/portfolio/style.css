@@ -1,0 +1,52 @@
+/*
+Theme Name: Портфолио
+Theme URI: https://example.com/portfolio
+Author: Kio
+Author URI: https://example.com
+Description: Портфолио
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: portfolio, blog, two-columns, custom-logo, featured-images
+Text Domain: creator-portfolio
+*/
+
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.25rem;
+}
+
+.portfolio-item img {
+    transition: transform 0.4s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-title-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    text-align: center;
+}
+
+.portfolio-item:hover .portfolio-title-overlay {
+    opacity: 1;
+}
+
+.portfolio-title-overlay h4 {
+    margin: 0;
+    padding: 1rem;
+}
